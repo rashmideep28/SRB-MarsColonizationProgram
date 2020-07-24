@@ -4,6 +4,7 @@ import './PathfinderVisualizer.scss';
 import {dijkstra, orderedShortestPath} from '../Algorithms/Dijkstras';
 import { aStar, orderedAStarPath } from '../Algorithms/A_star';
 
+//Fixed dimension for gride and initil position of start and finish nodes
 const START_NODE_ROW = 11;
 const START_NODE_COL = 10;
 const FINISH_NODE_ROW = 11;
@@ -250,35 +251,7 @@ export default class PathfinderVisualizer extends Component {
     }    
   }
 
-  /**
-   * Function that changes the obstacke setup
-   */
-  /*changeObstacles(){
-    if (this.state.isVisualizing) return;
-    // if (!this.state.visualizationBeenReset) return;
-    randomGenerator = true;
-    const grid = getInitialGrid();
-    this.setState({grid});
-    this.minorResetGrid(grid);
-    this.setState({visualizationBeenReset: true});
-  }*/
-
-  /**
-   * Function that generates Random Obstacle SetUp given a particular obstacle density
-   */
-  /*changeDensity(density){
-    if (this.state.isVisualizing) return;
-    // if (!this.state.visualizationBeenReset) return;
-    randomGenerator = true;
-    defaultRandomWallGenerator = density;
-    const grid = getInitialGrid();
-    this.setState({grid});
-    this.minorResetGrid(grid);
-    this.setState({visualizationBeenReset: true});
-
-  }*/
-  /**
-   * Function to show or hide obstacles On or Off
+   /* Function to show or hide obstacles On or Off
    */
   toggleObstacles(){
     if (this.state.isVisualizing) return;
